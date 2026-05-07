@@ -36,6 +36,7 @@ pip install torch torchvision tensorboardX monai scipy SimpleITK medpy pillow op
 ## Dataset Format
 
 The default configuration uses the `BraTs2020_t1_t2` dataset. The expected directory structure is:
+```
 datasets/BraTs2020_t1_t2/
 ├── train/
 │   ├── oriT2/          # High-resolution target images
@@ -47,6 +48,7 @@ datasets/BraTs2020_t1_t2/
 ├── oriT1/
 ├── orLRbicT1/x4/
 └── orLRbicT2/x4/
+```
 The data loader in `datasets/dataset.py` expects four input types:
 
 - **`oriT2`** — High-resolution target image
@@ -97,6 +99,7 @@ Model files included in this repository:
 ## Training Outputs
 
 All outputs are saved under `work_dir/`:
+```
 work_dir/
 ├── log/           # Training log files
 ├── checkpoints/   # Saved model weights
@@ -104,6 +107,7 @@ work_dir/
 │   └── best.pth   # Best checkpoint (by validation PSNR)
 ├── summary/       # TensorBoard logs
 └── outputs/       # Optional output results
+```
 ---
 
 ## License
